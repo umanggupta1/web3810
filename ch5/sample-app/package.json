@@ -1,0 +1,22 @@
+{
+  "name": "sample-app",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "node server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest --verbose",
+    "dockerize": "bash ./build-docker-image.sh"
+  },
+  "dependencies": {
+    "ejs": "^4.0.1",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "supertest": "^7.2.2"
+  }
+}
