@@ -1,14 +1,10 @@
-# Express.js and Automated Tests Example 
+# CI/CD Permissions Module 
 
-This folder contains:
-
-* `app.js`: An Express.js "Hello, World" app.
-* `app.test.js`: Automated integration tests for `app.js`.
-* `server.js`: Fires up the app in `app.js` to listen on port 8080.
-* `reverse.js`: Simple functions to reverse characters and words in a string.
-* `reverse.test.js`: Automated unit tests for `reverse.test.js`.
-* `package.json`: An NPM build configuration for the Node.js app.
-* `Dockerfile`: Instructions on how to package the Node.js app as a Docker image.
+This folder contains a root OpenTofu module that can be used to set up permissions for doing CI/CD with GitHub Actions,
+AWS, and OpenTofu. This module uses the [github-aws-oidc](../../modules/github-aws-oidc) module to configure GitHub as
+an OIDC provider in AWS and the [gh-actions-iam-roles](../../modules/gh-actions-iam-roles) module to create IAM roles
+in AWS that you can assume from GitHub Actions workflows (using OIDC) to run automated tests, `tofu plan`, and 
+`tofu apply`.
 
 For more information, see Chapter 5, "How to Set Up Continuous Integration (CI) and Continuous Delivery (CD)", of 
 [_Fundamentals of DevOps and Software Delivery_](https://www.fundamentals-of-devops.com) by Yevgeniy Brikman.

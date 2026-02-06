@@ -1,14 +1,6 @@
-# Express.js and Automated Tests Example 
+# Feature Toggle Example 
 
-This folder contains:
-
-* `app.js`: An Express.js "Hello, World" app.
-* `app.test.js`: Automated integration tests for `app.js`.
-* `server.js`: Fires up the app in `app.js` to listen on port 8080.
-* `reverse.js`: Simple functions to reverse characters and words in a string.
-* `reverse.test.js`: Automated unit tests for `reverse.test.js`.
-* `package.json`: An NPM build configuration for the Node.js app.
-* `Dockerfile`: Instructions on how to package the Node.js app as a Docker image.
+This folder contains a Node.js "Hello, World" app with a mock feature toggle lookup.
 
 For more information, see Chapter 5, "How to Set Up Continuous Integration (CI) and Continuous Delivery (CD)", of 
 [_Fundamentals of DevOps and Software Delivery_](https://www.fundamentals-of-devops.com) by Yevgeniy Brikman.

@@ -1,14 +1,11 @@
-# Express.js and Automated Tests Example 
+# GitHub Actions IAM Roles Module 
 
-This folder contains:
+This folder contains a reusable OpenTofu module that can create three IAM roles that can be assumed from GitHub Actions
+workflows using OIDC:
 
-* `app.js`: An Express.js "Hello, World" app.
-* `app.test.js`: Automated integration tests for `app.js`.
-* `server.js`: Fires up the app in `app.js` to listen on port 8080.
-* `reverse.js`: Simple functions to reverse characters and words in a string.
-* `reverse.test.js`: Automated unit tests for `reverse.test.js`.
-* `package.json`: An NPM build configuration for the Node.js app.
-* `Dockerfile`: Instructions on how to package the Node.js app as a Docker image.
+* An IAM role for running automated tests against the `lambda-sample` module on any branch.
+* An IAM role for running `tofu plan` against the `lambda-sample` module on any branch.
+* An IAM role for running `tofu apply` against the `lambda-sample` module on the `main` branch only.
 
 For more information, see Chapter 5, "How to Set Up Continuous Integration (CI) and Continuous Delivery (CD)", of 
 [_Fundamentals of DevOps and Software Delivery_](https://www.fundamentals-of-devops.com) by Yevgeniy Brikman.
