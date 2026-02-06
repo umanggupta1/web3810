@@ -1,11 +1,11 @@
-# Serverless Module with Automated Tests 
+# GitHub Actions IAM Roles Module 
 
-This folder contains: 
+This folder contains a reusable OpenTofu module that can create three IAM roles that can be assumed from GitHub Actions
+workflows using OIDC:
 
-* `*.tf` files: A root OpenTofu module that deploys a Node.js "Hello, World" serverless app using AWS Lambda and a
-  Lambda function URL.
-* `deploy.tftest.hcl`: An automated tests that uses the `tofu test` command to validate the serverless app works as
-  expected
+* An IAM role for running automated tests against the `lambda-sample` module on any branch.
+* An IAM role for running `tofu plan` against the `lambda-sample` module on any branch.
+* An IAM role for running `tofu apply` against the `lambda-sample` module on the `main` branch only.
 
 For more information, see Chapter 5, "How to Set Up Continuous Integration (CI) and Continuous Delivery (CD)", of 
 [_Fundamentals of DevOps and Software Delivery_](https://www.fundamentals-of-devops.com) by Yevgeniy Brikman.

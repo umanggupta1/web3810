@@ -10,8 +10,8 @@ This folder contains:
 * `package.json`: An NPM build configuration for the Node.js app.
 * `Dockerfile`: Instructions on how to package the Node.js app as a Docker image.
 
-For more information, see Chapter 4, "How to Version, Build, and Test Your Code", of [_Fundamentals of DevOps and 
-Software Delivery_](https://www.fundamentals-of-devops.com) by Yevgeniy Brikman.
+For more information, see Chapter 5, "How to Set Up Continuous Integration (CI) and Continuous Delivery (CD)", of 
+[_Fundamentals of DevOps and Software Delivery_](https://www.fundamentals-of-devops.com) by Yevgeniy Brikman.
 
 > [!IMPORTANT]  
 > This repo contains example code for learning and experimenting only, in conjunction with the book and blog post

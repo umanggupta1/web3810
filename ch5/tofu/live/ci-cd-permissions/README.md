@@ -1,11 +1,10 @@
-# Serverless Module with Automated Tests 
+# CI/CD Permissions Module 
 
-This folder contains: 
-
-* `*.tf` files: A root OpenTofu module that deploys a Node.js "Hello, World" serverless app using AWS Lambda and a
-  Lambda function URL.
-* `deploy.tftest.hcl`: An automated tests that uses the `tofu test` command to validate the serverless app works as
-  expected
+This folder contains a root OpenTofu module that can be used to set up permissions for doing CI/CD with GitHub Actions,
+AWS, and OpenTofu. This module uses the [github-aws-oidc](../../modules/github-aws-oidc) module to configure GitHub as
+an OIDC provider in AWS and the [gh-actions-iam-roles](../../modules/gh-actions-iam-roles) module to create IAM roles
+in AWS that you can assume from GitHub Actions workflows (using OIDC) to run automated tests, `tofu plan`, and 
+`tofu apply`.
 
 For more information, see Chapter 5, "How to Set Up Continuous Integration (CI) and Continuous Delivery (CD)", of 
 [_Fundamentals of DevOps and Software Delivery_](https://www.fundamentals-of-devops.com) by Yevgeniy Brikman.

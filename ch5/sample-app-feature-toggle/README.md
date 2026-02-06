@@ -1,11 +1,6 @@
-# Serverless Module with Automated Tests 
+# Feature Toggle Example 
 
-This folder contains: 
-
-* `*.tf` files: A root OpenTofu module that deploys a Node.js "Hello, World" serverless app using AWS Lambda and a
-  Lambda function URL.
-* `deploy.tftest.hcl`: An automated tests that uses the `tofu test` command to validate the serverless app works as
-  expected
+This folder contains a Node.js "Hello, World" app with a mock feature toggle lookup.
 
 For more information, see Chapter 5, "How to Set Up Continuous Integration (CI) and Continuous Delivery (CD)", of 
 [_Fundamentals of DevOps and Software Delivery_](https://www.fundamentals-of-devops.com) by Yevgeniy Brikman.

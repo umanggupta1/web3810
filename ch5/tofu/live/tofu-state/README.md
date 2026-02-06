@@ -1,11 +1,7 @@
-# Serverless Module with Automated Tests 
+# OpenTofu State Module 
 
-This folder contains: 
-
-* `*.tf` files: A root OpenTofu module that deploys a Node.js "Hello, World" serverless app using AWS Lambda and a
-  Lambda function URL.
-* `deploy.tftest.hcl`: An automated tests that uses the `tofu test` command to validate the serverless app works as
-  expected
+This folder contains a root OpenTofu module that uses the [state-bucket](../../modules/state-bucket) module to create 
+an S3 bucket and DynamoDB table that can be used for storing OpenTofu state.
 
 For more information, see Chapter 5, "How to Set Up Continuous Integration (CI) and Continuous Delivery (CD)", of 
 [_Fundamentals of DevOps and Software Delivery_](https://www.fundamentals-of-devops.com) by Yevgeniy Brikman.
