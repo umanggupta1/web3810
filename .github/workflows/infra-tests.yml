@@ -27,8 +27,7 @@ jobs:
       - name: Run OpenTofu tests
         working-directory: ch5/tofu/live/lambda-sample
         env:
-          # SAFE lambda name for CI runs
-          TF_VAR_name: lambda-sample-${{ github.run_number }}
+          TF_VAR_name: lambda-sample
         run: |
           tofu init -backend=false -input=false
           tofu test -verbose
