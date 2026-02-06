@@ -21,3 +21,12 @@ module "function" {
 
   create_url = true
 }
+
+# Add resource-based policy to allow public invocation
+resource "aws_lambda_permission" "allow_public_invocation" {
+  statement_id           = "AllowPublicInvoke"
+  action                 = "lambda:InvokeFunctionUrl"
+  function_name          = module.function.function_name
+  principal              = "*"
+  function_url_auth_type = "NONE"
+}
