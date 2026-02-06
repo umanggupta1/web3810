@@ -23,7 +23,7 @@ jobs:
       - name: Tofu Test
         working-directory: ch5/tofu/live/lambda-sample
         env:
-          TF_VAR_name: lambda-sample-${{ github.run_id }}
+          TF_VAR_name: lambda-sample-ci-${{ github.run_number }}
         run: |
           tofu init -backend=false -input=false
           tofu test -verbose
