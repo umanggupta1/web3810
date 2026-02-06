@@ -1,4 +1,4 @@
-name: Infrastructure Tests
+name: Infrastructure tests
 on: push
 jobs:
 opentofu_test:
